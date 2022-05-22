@@ -1,0 +1,80 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"fullName": "Ali aaa",
+			"email": "ali.aaa@mail.com",
+			"password": "123456",
+			"isAdmin": false,
+			"favorites": [
+				{
+					"forumId": 1,
+					"commentId": 1
+				}
+			]
+		},
+		{
+			"id": 2,
+			"fullName": "Shmuel bbb",
+			"email": "shmuel.bbb@mail.com",
+			"password": "123456",
+			"isAdmin": false,
+			"favorites": []
+		},
+		{
+			"id": 3,
+			"fullName": "Shaul ccc",
+			"email": "shaul.ccc@mail.com",
+			"password": "123456",
+			"isAdmin": false,
+			"favorites": []
+		},
+		{
+			"fullName": "David Ben-Yishay",
+			"email": "aniDavid@mail.com",
+			"password": "123456",
+			"isAdmin": false,
+			"id": 1609670176826,
+			"favorites": []
+		}
+	],
+	"forums": [
+		{
+			"id": 1,
+			"name": "Surfboards",
+			"comments": [
+				{
+					"id": 1,
+					"userId": 1,
+					"title": "best waves this week",
+					"body": "where last Sunday"
+				}
+			]
+		},
+		{
+			"name": "Nodejs tips and tricks",
+			"id": 1609667341122,
+			"comments": [				{
+				"id": 233684,
+				"userId": 1,
+				"title": "synch method",
+				"body": "use process.nextTick callback"
+			}]
+		},
+		{
+			"name": "House cooking",
+			"id": 1609668516780,
+			"comments": []
+		},
+		{
+			"name": "Arduino rulesss!",
+			"id": 1609668542683,
+			"comments": []
+		},
+		{
+			"name": "React.js tips and tricks",
+			"id": 1609668773968,
+			"comments": []
+		}
+	]
+}
