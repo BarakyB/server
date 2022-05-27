@@ -1,4 +1,6 @@
 const users= require('./Users')
+const roles= require('./Roles')
+const workers= require('./Workers')
 const data = require('./forumsData.json')
 const fs = require('fs');
 const express = require('express');
@@ -241,6 +243,9 @@ app.use((error, req, res, next) => {
 });
 
 app.use("/users", users);
+app.use("/roles", roles);
+app.use("/workers", workers);
+
 app.get("/forums", readForums);
 app.get("/forums/:forumId", readForum);
 app.post("/forums", createForum);
