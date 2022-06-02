@@ -7,6 +7,12 @@ router.get("/", async (req, res) => {
   res.json(user)
 });
 
+router.get("/:id", async (req, res) => {
+    const {id}= req.params
+    const user= await Query ('SELECT * FROM users where id = '+ id  )
+    res.json(user)
+});
+
 router.post("/", async (req, res) => {
   const {user} = req.body
     const select_query = `SELECT * from users where email = ?`;
@@ -26,6 +32,12 @@ router.post("/", async (req, res) => {
 
 
 });
+
+
+
+
+
+
 
 router.put("/", async (req, res) => {
     const {user} = req.body

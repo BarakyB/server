@@ -3,8 +3,8 @@ const Query = require("./dbConfig");
 const bcrypt = require("bcrypt");
 
 router.post("/", async (req, res) => {
-  let { first_name, last_name, user_name, password, role } = req.body;
-  if (!first_name || !last_name || !user_name || !password)
+  let { first_name, last_name, user_name, email, password, role } = req.body;
+  if (!first_name || !last_name ||  !user_name || !email || !password)
     return res.status(400).json({ err: true, msg: "missing details" });
   try {
     const select_query = `SELECT * from users where user_name = ?`;
@@ -13,6 +13,7 @@ router.post("/", async (req, res) => {
       first_name: "admin",
       last_name: "admin1",
       user_name: "admin",
+      email: "admin@admin.com",
       password:1234
     };
     if (user.length > 0) {
@@ -40,5 +41,12 @@ router.post("/", async (req, res) => {
     res.status(500).json({ err: true, msg: "server error" });
   }
 });
+
+
+
+
+
+
+
 
 module.exports = router;
