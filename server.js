@@ -1,7 +1,7 @@
 const users= require('./Users')
 const workerChoice= require('./WorkerChoice')
 const auth= require('./Auth')
-
+const path =require("path")
 const roles= require('./Roles')
 const workers= require('./Workers')
 const data = require('./forumsData.json')
@@ -249,9 +249,10 @@ app.use("/users", users);
 app.use("/roles", roles);
 app.use("/workers", workers);
 app.use("/auth", auth);
+//app.use("/workerChoice", workerChoice);
 app.use("/workerChoice", workerChoice);
-app.get("/workerChoice", workerChoice);
-app.put("/workerChoice/:userId", workerChoice);
+//app.put("/workerChoice/:userId", workerChoice);
+app.use("/image",express.static(path.join(__dirname,"image")));
 
 app.get("/users", users);
 app.get("/forums", readForums);
